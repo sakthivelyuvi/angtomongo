@@ -1,0 +1,13 @@
+<p>post works!</p>
+
+<form [formGroup]="works">
+    
+    <label>NAME:</label>
+    <input type="text" formControlName="name" name="name"><br><br>
+    <label >FEES:</label>
+    <input type="text" formControlName="fees" name="fees"><br><br>
+    <label >PLACE:</label>
+    <input type="text" formControlName="place" name="place"><br><br>
+<button (click)="posts()">SUBMIT</button>
+<button (click)="gotoHome()">CANCEL</button>
+</form>

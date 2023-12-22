@@ -1,0 +1,40 @@
+<p>getall works!</p>
+<div class="container">
+
+<button type="button" class="btn btn-info" (click)="gotoPost()">addnew</button>
+
+<table class="table table-striped table-hover">
+
+    <thead>
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Fees</th>
+        <th scope="col">Place</th>
+        <th scope="col">Option</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let w of work;let i=index ">
+        <td>{{i+1}}</td>
+        <td >{{w._id}}</td>
+        <td>{{w.name}}</td>
+        <td>{{w.fees}}</td>
+        <td>{{w.place}}</td>
+        <td>
+            <button type="button" class="btn btn-primary" (click)="gotoGet(w._id)">View</button>
+            <button type="button" class="btn btn-danger" (click)="deleteName(w._id)">Delete</button>
+            <button type="button" class="btn btn-warning">Update</button>
+
+
+
+        </td>
+
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
